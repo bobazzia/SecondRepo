@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace задача_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var pokemon1 = int.Parse(Console.ReadLine());
+            var pokemon2 = int.Parse(Console.ReadLine());
+            var maxBattles = int.Parse(Console.ReadLine());
+            var count = 0;
+
+            for (int i = 1; i <= pokemon1; i++)
+            {
+                for (int a = 1; a <= pokemon2; a++)
+                {
+                    count++;
+                    Console.Write("({0} <-> {1}) ", i, a);
+                    if (count == maxBattles)
+                    {
+                        break;
+                    }
+                }
+                if (count == maxBattles)
+                {
+                    break;
+                }
+            }
+        }
+    }
+}
