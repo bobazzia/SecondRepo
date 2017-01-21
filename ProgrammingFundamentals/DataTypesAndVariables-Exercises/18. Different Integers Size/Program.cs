@@ -18,32 +18,32 @@ namespace _18.Different_Integers_Size
             }
             catch (OverflowException)
             {
-                Console.WriteLine($"{number} can't fit in any type");
+                Console.WriteLine("{0} can't fit in any type", number);
                 return;
             }
             checkNumber = long.Parse(number);
-            Console.WriteLine($"{checkNumber} can fit in:");
-            if (checkNumber <= 127 && checkNumber > -128)
+            Console.WriteLine("{0} can fit in:", checkNumber);
+            if (checkNumber <= sbyte.MaxValue && checkNumber >= sbyte.MinValue)
             {
                 Console.WriteLine("* sbyte");
             }
-            if (checkNumber <= 255 && checkNumber >= 0)
+            if (checkNumber <= byte.MaxValue && checkNumber >= byte.MinValue)
             {
                 Console.WriteLine("* byte");
             }
-            if (checkNumber <= 32767 && checkNumber >= -32768)
+            if (checkNumber <= short.MaxValue && checkNumber >= short.MinValue)
             {
                 Console.WriteLine("* short");
             }
-            if (checkNumber <= 65535 && checkNumber >= 0)
+            if (checkNumber <= ushort.MaxValue && checkNumber >= ushort.MinValue)
             {
-                Console.WriteLine("* short");
+                Console.WriteLine("* ushort");
             }
-            if (checkNumber <= 2147483647 && checkNumber >= -2147483648)
+            if (checkNumber <= int.MaxValue && checkNumber >= int.MinValue)
             {
                 Console.WriteLine("* int");
             }
-            if (checkNumber <= 4294967295 && checkNumber >= 0)
+            if (checkNumber <= uint.MaxValue && checkNumber >= uint.MinValue)
             {
                 Console.WriteLine("* uint");
             }

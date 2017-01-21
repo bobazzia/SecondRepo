@@ -10,13 +10,13 @@ namespace _19.Thea_The_Photographer
     {
         static void Main(string[] args)
         {
-            var photosTaken = int.Parse(Console.ReadLine());
-            var secondsNeedToSee = int.Parse(Console.ReadLine());
-            var percentUploadPhotos = int.Parse(Console.ReadLine());
-            var secondsNeedToUpload = int.Parse(Console.ReadLine());
+            var photosTaken = long.Parse(Console.ReadLine());
+            var secondsNeedToSee = long.Parse(Console.ReadLine());
+            var percentUploadPhotos = long.Parse(Console.ReadLine());
+            var secondsNeedToUpload = long.Parse(Console.ReadLine());
 
             double uploadPhotos = Math.Ceiling(photosTaken * percentUploadPhotos / 100.0);
-            long totalSecondsNeeded = photosTaken * secondsNeedToSee + (int)uploadPhotos * secondsNeedToUpload;
+            long totalSecondsNeeded = photosTaken * secondsNeedToSee + (long)uploadPhotos * secondsNeedToUpload;
             long tempSeconds = totalSecondsNeeded;
 
             long resultDay = tempSeconds / 86400;
